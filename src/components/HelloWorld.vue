@@ -252,7 +252,9 @@ export default {
   },
   watch:{
     schfilter: function(val, oldVal) {
-      console.log(143,val,oldVal,this.datalist)
+      console.log('重中之重')
+      //this.datalist显示的data
+      //this.itemsTwo接口全部的数据
       if (!val) {
         this.datalist = this.itemsTwo;
         return ;
