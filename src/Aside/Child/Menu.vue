@@ -61,6 +61,14 @@ export default {
                     index:'1-111',
                     name:'菜单About',
                      route:'/vie_About',
+                  },{
+                    index:'2',
+                    name:'css功能',
+                    children:[{
+                      index:'2-1',
+                      name:'旋转1',
+                      route:'/com/TranSition'
+                    }]
                   }]
             },{
                 index:'2',

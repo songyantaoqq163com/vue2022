@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Vant from 'vant'
 import 'vant/lib/index.css'
 
+import './assets/index.css'//公共样式
+
 // import echarts from 'echarts'
 // Vue.prototype.$echarts=echarts
 // import VCharts from 'v-charts'

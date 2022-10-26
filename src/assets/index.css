@@ -1,0 +1,10 @@
+.disblock{
+    display:inline-block
+}
+.blue{
+    border:1px solid blue;
+}
+.wh200{
+    width: 200px;
+    height:200px
+}

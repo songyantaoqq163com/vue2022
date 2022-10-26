@@ -5,6 +5,7 @@ import Homepage from '../components/HelloWorld'
 import vie_About from '../views/About'
 import vie_Home from '../views/Home'
 import menuserch from '../components/menuSerch'
+import TranSition from '@/components/TranSition'
 
 import vie_one  from '../views/vie_one'
 Vue.use(VueRouter)
@@ -38,6 +39,10 @@ const routes = [
       path:'/com/menuserch',
       name:'menuserch',
       component:menuserch
+    },{
+      path:'/com/TranSition',
+      name:'TranSition',
+      component:TranSition
     }]
   },
   
