@@ -11,7 +11,8 @@
               <p>{{valueObj.value}}</p>
               <p>{{valueObj.path}}</p>
     </span>
-    <p>颜色配置 <el-button @click="clickcolor">查询数量</el-button>{{titlecolor}}</p>
+    <p>颜色配置 <el-button @click="clickcolor">查询数量</el-button>{{titlecolor}} <span><el-button @click="clickreverse">颜色倒序</el-button></span></p>
+   
     <el-row>
       <el-col :span="12" style="border:1px solid red">
         <span v-for="(item,index) in listColors" :key="index" >
@@ -137,6 +138,9 @@ export default {
     methods:{
         clickcolor(){
             this.titlecolor=this.listColors.length
+        },
+        clickreverse(){
+          this.listColors=this.listColors.reverse()
         },
           querySearchone(queryString, cb) {
                 var restaurants = this.listtwo;
