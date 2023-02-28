@@ -8,6 +8,8 @@ import menuserch from '../components/menuSerch'
 import TranSition from '@/components/TranSition'
 
 import vie_one  from '../views/vie_one'
+
+import leftInput from '../components/leftInput'
 Vue.use(VueRouter)
 
 const routes = [
@@ -43,6 +45,10 @@ const routes = [
       path:'/com/TranSition',
       name:'TranSition',
       component:TranSition
+    },{
+      path:'/com/leftInput',
+      name:'leftInput',
+      component:leftInput
     }]
   },
   
@@ -50,7 +56,7 @@ const routes = [
 
 const router = new VueRouter({
   // mode: 'history',
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
   routes
 })
 

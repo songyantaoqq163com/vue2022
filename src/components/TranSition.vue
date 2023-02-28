@@ -40,8 +40,8 @@ export default {
         /* -webkit-transform:width 2s,height 2s,-webkit-transform 2s; */
     }
     .box1_img:hover{
-        width: 300px;
-        height: 300px;
+        width: 290px;
+        height: 290px;
         /* transition: transform 2s linear 0s;*突然变 */
         transition:width 2s, height 2s,transform 2s;/**慢慢改变宽高 */
         /* transform: scale(1.2) rotate(360deg); */
@@ -76,8 +76,8 @@ export default {
         height: 50px;
         background-color: red;
         position:relative;
-        /* animation:anim 3s;*不循环 */
-        animation:anim 3s infinite alternate;/*循环*/
+        animation:anim 3s;/*不循环*/
+        /* animation:anim 3s infinite alternate;循环 */
         display:inline-block;
         /* -webkit-animation: anim 3s; */
     }

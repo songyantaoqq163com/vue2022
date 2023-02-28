@@ -77,7 +77,15 @@ export default {
             },{
                 index:'3',
                 name:'新世界',
-                route:'/first/Homepage'
+                children:[{
+                  index:'3-1',
+                  name:'查询表格',
+                  route:'/first/Homepage'
+                },{
+                  index:'3-2',
+                  name:'精度丢失',
+                  route:'/com/leftInput'
+                }]
             }
         ]
     };

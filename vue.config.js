@@ -1,6 +1,7 @@
 module.exports = {
     // 关闭eslint
     lintOnSave:false,
+    publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
     // 代理跨域
     devServer: {
         host:"localhost",
