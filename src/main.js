@@ -18,11 +18,13 @@ import './assets/index.css'//公共样式
 
 import  *  as echarts from 'echarts'
 import "echarts-gl"; //echarts 3D插件
+import {saveAs} from 'file-saver'//下载txt文件
 Vue.prototype.$echarts = echarts;
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(Vant)
+Vue.component('saveAs',saveAs)
 
 new Vue({
   router,

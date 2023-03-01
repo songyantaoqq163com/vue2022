@@ -83,7 +83,7 @@ export default {
                   route:'/first/Homepage'
                 },{
                   index:'3-2',
-                  name:'精度丢失',
+                  name:'解析表格',
                   route:'/com/leftInput'
                 }]
             }
