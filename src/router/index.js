@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../Aside/Home'
-import Homepage from '../components/HelloWorld'
+import Homepage from '../First/HelloWorld'
+import leftInput from '../First/leftInput'
+
 import vie_About from '../views/About'
 import vie_Home from '../views/Home'
 import menuserch from '../components/menuSerch'
@@ -9,7 +11,7 @@ import TranSition from '@/components/TranSition'
 
 import vie_one  from '../views/vie_one'
 
-import leftInput from '../components/leftInput'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -46,7 +48,7 @@ const routes = [
       name:'TranSition',
       component:TranSition
     },{
-      path:'/com/leftInput',
+      path:'/first/leftInput',
       name:'leftInput',
       component:leftInput
     }]

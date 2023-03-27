@@ -84,7 +84,7 @@ export default {
                 },{
                   index:'3-2',
                   name:'解析表格',
-                  route:'/com/leftInput'
+                  route:'/first/leftInput'
                 }]
             }
         ]
