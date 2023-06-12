@@ -16,7 +16,10 @@
     "vant": "^2.12.45",
     "vue": "^2.6.11",
     "vue-canvasvideo": "^1.0.0",
+    "vue-drag-resize": "^1.5.4",
+    "vue-draggable-resizable": "^2.3.0",
     "vue-router": "^3.2.0",
+    "vuedraggable": "^2.24.3",
     "vuex": "^3.6.2",
     "vux": "^2.0.17",
     "xlsx": "^0.18.5"

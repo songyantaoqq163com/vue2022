@@ -1,67 +1,95 @@
 <template>
   <div class="home">
-    
-        <!-- v-vharts -->
-        <!-- <ve-line
-          height="300px"
-          :series="series"
-          :xAxis="xAxis"
-          :yAxis="yAxis"
-          :tooltip="tooltip"
-          :legend="legend"></ve-line> -->
-          <div>
-              <div ref="echarts" id="echarts"></div>
-          </div>
-  
-    
+    <el-row>
+      <el-col :span="10">
+        <div>
+          <div ref="echarts" id="echarts"></div>
+        </div>
+      </el-col>
+      <el-col :span="4">
+        <p>列表拖拽</p>
+        <draggable element="ul" v-model="list">
+          <li v-for="item in list" :key="item.index">{{ item.id }}--{{ item.name }}</li>
+        </draggable>
+      </el-col>
+      <el-col :span="10">
+        <div>
+          <inc_imgsvg v-if="srcImg" :imgWidth="'100%'">
+            <img :src="srcImg" alt="">
+          </inc_imgsvg>
+          <!-- <VueDragResize
+           
+            :isActive="isActive"
+            :w="width"
+            :h="height"
+            :aspectRatio="true"
+            :sticks="['tl','tr','bl','br']"
+            :minw="10"
+            :minh="10"
+            :x="left"
+            :y="top"
+            v-on:resizing="resize"
+            v-on:dragging="resize"
+            v-on:resizestop="stop"
+            v-on:dragstop="stop"
+          >
+            <img src="../../assets/img01.gif" class="logoImg">
+          </VueDragResize> -->
+
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 // import VeLine from 'v-charts/lib/line.js'
+import VueDragResize from 'vue-drag-resize';
+
+import draggable from 'vuedraggable'//移动
+import inc_imgsvg from './HomeIndex.vue'
+
 export default {
   name: "Home",
   components: {
     // VeLine
+    draggable,
+    VueDragResize,
+    inc_imgsvg
   },
   data() {
     return {
-      series: [
-        {
-          name: "归档",
-          type: "line",
-          data: [1, 2, 3, 4, 5, 6, 7],
-        },
-      ],
-      yAxis: {
-        type: "value",
-      },
-      tooltip: {
-        trigger: "axis",
-      },
-      xAxis: [
-        {
-          type: "category",
-          axisLabel: {
-            rotate: 45,
-          },
-          data: [1, 2, 3, 4, 5, 6],
-        },
-      ],
-      legend: {
-        data: ["归档"],
-        textStyle: {
-          //图例文字的样式
-          color: "#00d4f7",
-          fontSize: 16,
-        },
-      },
+      list: [{
+        id: 1,
+        name: '第一项'
+      }, {
+        id: 2,
+        name: '第二项'
+      }, {
+        id: 3,
+        name: '第三项'
+      }, {
+        id: 4,
+        name: '第四项'
+      }],
+
+      startclientX: 0, // 元素拖拽前距离浏览器的X轴位置
+      startclientY: 0,
+      srcImg:require(`../../assets/img01.gif`)
     };
   },
   mounted() {
     this.bar3D();
   },
   methods: {
+    //移动
+    Start(e) {
+      this.startclientX = e.layerX // 记录拖拽元素初始位置
+      this.startclientY = e.layerY
+      console.log(1,e.layerX,e.layerY,e)
+    },
+
+
     bar3D() {
       let dom = this.$refs.echarts;
       let option = {

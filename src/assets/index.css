@@ -8,3 +8,6 @@
     width: 200px;
     height:200px
 }
+.borderred{
+    border:1px solid red;
+}
