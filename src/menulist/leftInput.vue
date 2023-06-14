@@ -108,6 +108,7 @@ export default {
         console.log("文件打开失败");
         return;
       } else {
+        this.Xlist = [];
         let data = await this.readFile(file);
         let workbook = XLSX.read(data, { type: "binary", cellDates: true }); //解析二进制格式数据
         console.log("二进制数据的解析:");
@@ -117,18 +118,20 @@ export default {
         console.log("最终解析的 json 格式数据:");
         console.log(result, XLSX);
 
-        this.Xlist = [];
+        
+      
         for (var i in result[0]) {
-          var a = { label: result[0][i], value: i };
+          var a = { value: String(i), label: String(i) };
           this.Xlist.push(a);
         }
         console.log("表头", this.Xlist);
         this.datalist = [];
-        for (var j = 0; j < result.length; j++) {
-          if (j !== 0) {
-            this.datalist.push(result[j]);
-          }
-        }
+        // for (var j = 0; j < result.length; j++) {
+        //   if (j !== 0) {
+        //     this.datalist.push(result[j]);
+        //   }
+        // }
+        this.datalist=result
         console.log("表格", this.datalist);
       }
     },
