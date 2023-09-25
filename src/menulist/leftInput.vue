@@ -32,8 +32,8 @@
     </el-table>
 
     <div>
-      <h1>This is an about page</h1>
-    <el-table :data="tableData" class="headerName" :height="500">
+      <h1>表格内拖拽</h1>
+    <el-table :data="tableData" ref="tableRef" class="headerName" :height="500">
       <el-table-column label="序号" type="index"></el-table-column>
       <el-table-column label="发现问题" prop="label_1"></el-table-column>
       <el-table-column label="解决问题" prop="value_1"></el-table-column>
@@ -44,8 +44,12 @@
 
 <script>
 import * as XLSX from "xlsx/xlsx.mjs";
+import Sortable from "sortablejs"
 // import {saveAs} from 'file-saver'
 export default {
+  components:{
+    Sortable
+  },
   //el-input
   data() {
     return {
@@ -59,14 +63,46 @@ export default {
        },{
          label_1:'定义表格高度',
          value_1:'height="calc(100vh - 250px)"'
-       }
-     ]
+       },{
+         label_1:'el-input禁用浏览器密码',
+         value_1:'show-password autocomplete= "new-password" '
+       },
+     ],
+     newIndexList:[]
     };
   },
   created(){
     this.line()
   },
+  mounted(){
+    this.tableData.forEach( item => {
+      this.newIndexList.push(item.id);
+    });
+    //阻止火狐拖拽新建新页面
+    document.body.addEventListener("drop", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+    }, false);
+    this.initSortableList();
+  },
   methods: {
+    initSortableList(){
+      let el = this.$refs.tableRef.$el.querySelector('.el-table__body-wrapper tbody');
+      //设置配置
+      let _this = this
+      Sortable.create(el, {
+        animation: 150,
+        sort: true,
+        draggable: '.el-table__row', // 设置可拖拽行的类名(el-table自带的类名)
+        forceFallback: true,
+        onEnd({newIndex, oldIndex}) {
+          let currRow = _this.newIndexList.splice(oldIndex, 1)[0];
+          _this.newIndexList.splice(newIndex, 0, currRow);
+        }
+      })
+
+    },
+
     line(){
       var list=[1,2,3,4,5]
       for(var row in list){

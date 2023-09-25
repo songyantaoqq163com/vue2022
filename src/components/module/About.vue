@@ -1,6 +1,8 @@
 <template>
   <div class="about">
     <el-button @click="draw">触发</el-button>
+    <a href="./pad.apk" download="pad.apk">下载</a>
+    <i class="el-icon-search butSearch "></i>
     <el-dialog title="查看图片" :visible.sync="dialogJPG" append-to-body>
       <canvas id="canvas" width="540" height="370" style="border: 1px solid red" @mousedown="doDraw($event)"></canvas>
     </el-dialog>
@@ -162,6 +164,16 @@ export default {
 
 .div2 .canvas1 {
   border: 1px solid lawngreen;
+}
+.butSearch{
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border:1px solid #bcd711
+}
+.butSearch:hover{
+  border:1px solid red;
 }
 </style>
 
