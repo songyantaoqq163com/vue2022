@@ -11,6 +11,7 @@ import Echartshree from '@/components/Echarts/Echartshree'
 import vie_About from '@/components/Css/About'
 import CssTranSition from '@/components/Css/CssTranSition'
 import CssDiv from '@/components/Css/CssDiv'
+import jsDrag from '@/components/JsFunction/jsDrag'
 
 
 Vue.use(VueRouter)
@@ -56,6 +57,10 @@ const routes = [
       path: '/first/leftInput',
       name: 'leftInput',
       component: leftInput
+    },{
+      path:'/js/jsDrag',
+      name:'jsDrag',
+      component:jsDrag
     }]
   },
 

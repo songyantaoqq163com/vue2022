@@ -7,18 +7,10 @@
         </div>
       </el-col>
       <el-col :span="4">
-        <p>列表拖拽</p>
-        <draggable element="ul" v-model="list">
-          <li v-for="item in list" :key="item.index">{{ item.id }}--{{ item.name }}</li>
-        </draggable>
+        4
       </el-col>
       <el-col :span="10">
-        <div style="width:400px;height:300px">
-          <p>图片缩放</p>
-          <inc_imgsvg v-if="srcImg" :imgWidth="'80%'">
-            <img :src="srcImg" alt="">
-          </inc_imgsvg>
-        </div>
+        10
       </el-col>
     </el-row>
   </div>
@@ -27,34 +19,14 @@
 <script>
 // import VeLine from 'v-charts/lib/line.js'
 import VueDragResize from 'vue-drag-resize';
-
-import draggable from 'vuedraggable'//移动
-import inc_imgsvg from './HomeIndex.vue'
-
 export default {
   name: "Home",
   components: {
     // VeLine
-    draggable,
     VueDragResize,
-    inc_imgsvg
   },
   data() {
     return {
-      list: [{
-        id: 1,
-        name: '第一项'
-      }, {
-        id: 2,
-        name: '第二项'
-      }, {
-        id: 3,
-        name: '第三项'
-      }, {
-        id: 4,
-        name: '第四项'
-      }],
-
       startclientX: 0, // 元素拖拽前距离浏览器的X轴位置
       startclientY: 0,
       srcImg:require(`../../assets/img01.gif`)
