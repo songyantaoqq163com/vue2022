@@ -13,29 +13,11 @@
         </draggable>
       </el-col>
       <el-col :span="10">
-        <div>
-          <inc_imgsvg v-if="srcImg" :imgWidth="'100%'">
+        <div style="width:400px;height:300px">
+          <p>图片缩放</p>
+          <inc_imgsvg v-if="srcImg" :imgWidth="'80%'">
             <img :src="srcImg" alt="">
           </inc_imgsvg>
-          <!-- <VueDragResize
-           
-            :isActive="isActive"
-            :w="width"
-            :h="height"
-            :aspectRatio="true"
-            :sticks="['tl','tr','bl','br']"
-            :minw="10"
-            :minh="10"
-            :x="left"
-            :y="top"
-            v-on:resizing="resize"
-            v-on:dragging="resize"
-            v-on:resizestop="stop"
-            v-on:dragstop="stop"
-          >
-            <img src="../../assets/img01.gif" class="logoImg">
-          </VueDragResize> -->
-
         </div>
       </el-col>
     </el-row>

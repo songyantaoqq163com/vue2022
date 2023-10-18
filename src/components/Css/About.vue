@@ -1,15 +1,21 @@
 <template>
   <div class="about">
-    <el-button @click="draw">触发</el-button>
-    <a href="./pad.apk" download="pad.apk">下载</a>
-    <i class="el-icon-search butSearch "></i>
+    <el-tabs tab-position="left" tyle="height:150px">
+      <el-tab-pane label="触发画布">
+        <el-button @click="draw">触发</el-button>
+      </el-tab-pane>
+      <el-tab-pane label="下载">
+        <a href="./pad.apk" download="pad.apk">下载</a>
+        <i class="el-icon-search butSearch "></i>
+      </el-tab-pane>
+      <el-tab-pane label="播放音乐">
+        <audio controls="controls" class="audio" src="../../assets/xumi.mp3"></audio>
+      </el-tab-pane>
+    </el-tabs>
+    
     <el-dialog title="查看图片" :visible.sync="dialogJPG" append-to-body>
       <canvas id="canvas" width="540" height="370" style="border: 1px solid red" @mousedown="doDraw($event)"></canvas>
     </el-dialog>
-    <div class="div2">
-      <canvas id="canvas1" class="borderred"></canvas>
-      <audio controls="controls" class="audio" src="../../assets/xumi.mp3"></audio>
-    </div>
   </div>
 </template>
 <script>
@@ -26,67 +32,10 @@ export default {
   },
   created() {
     setTimeout(() => {
-      this.Yinping()
+      // this.Yinping()
     }, 2000)
-
-
-
   },
   methods: {
-    Yinping() {
-      const audioEle = document.querySelector('.audio');
-      const cvs = document.querySelector('#canvas1');
-      const ctx = cvs.getContext('2d')
-      // console.log(110, ctx)
-      this.InitCvs(ctx)//初始化canvas尺寸
-      let inInit = false
-      //视频开始播放inplay
-      let dataArray, analyser
-      audioEle.onplay = function () {
-        if (inInit) {
-          return
-        }
-
-        const audCtx = new AudioContext()//创建音频上下文
-        const source = audCtx.createMediaElementSource//创建音频节点
-          (audioEle)
-        analyser = audCtx.createAnalyser();
-        analyser.fftSize = 512//窗口大小
-        // const dataArray=new Uint8Array(512/2)//创建8位子节点数组,下同
-        dataArray = new Uint8Array(analyser.frequencyBinCount);
-        source.connect(analyser);//连接到输出
-        analyser.connect(audCtx.destination)//输出
-        inInit = true
-        console.log(60, ctx, cvs, inInit, analyser, dataArray)
-        // this.audioDraws(ctx, cvs, inInit, analyser, dataArray)
-
-        // Dram.function(){
-        //   requestAnimationFrame(Dram)
-        //   清空画布
-        // const{width,height}=cvs;
-        // ctx.clearRect(0,0,width,height)
-        // if(!inInit){
-        //   return
-        // }
-        // 分析并放入
-        // analyser.getByteFrequencyData(dataArray);
-        // const len=dataArray.length;//条数
-        // const barWidth=width/length;
-        // ctx.fillStyle='#000'
-        // for(let i=0;i<len;i++){
-        //   const data=dataArray[i]//<=256
-        //   const barHeight=data/255*height
-        //   const x=i*barWidth;
-        //   const y=height-barHeight
-        //   ctx.fillRect(x,y,barWidth,barHeight)
-        // }
-        // }
-      }
-
-
-
-
-    },
     InitCvs(ctx) {
       ctx.width = window.innerWidth * devicePixelRatio;
       ctx.height = (window.innerHeight / 2) * devicePixelRatio

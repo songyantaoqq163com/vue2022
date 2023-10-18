@@ -9,14 +9,16 @@
           :show-file-list="false"
           :on-change="handle"
         >
-          <el-button type="primary" size="mini">解析excel</el-button>
+          <el-button type="primary" size="mini">上传并解析excel文件</el-button>
         </el-upload>
       </el-form-item>
       <el-form-item>
-        <el-button type="warning" size="mini" @click="fileClick"
-          >将字符串转为txt文档下载</el-button
-        >
+        <el-input v-model="queryVo.str"></el-input>
       </el-form-item>
+      <el-form-item>
+        <el-button type="warning" size="mini" @click="fileClick">将字符串转为txt文档下载</el-button>
+      </el-form-item>
+    
     </el-form>
     <el-table :data="datalist" border height="20vh">
       <el-table-column
@@ -68,7 +70,10 @@ export default {
          value_1:'show-password autocomplete= "new-password" '
        },
      ],
-     newIndexList:[]
+     newIndexList:[],
+     queryVo:{
+      str:'天涯明月刀2'
+     }
     };
   },
   created(){
@@ -173,8 +178,7 @@ export default {
     },
     //转换为txt
     fileClick() {
-      let str = "天涯明月刀2";
-      let strData = new Blob([str], { type: "text/plain;charset=utf-8" });
+      let strData = new Blob([this.queryVo.str], { type: "text/plain;charset=utf-8" });
       saveAs(strData, "测试文件下载.txt");
     },
   },

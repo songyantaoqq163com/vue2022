@@ -6,11 +6,11 @@ import leftInput from '../menulist/leftInput'
 
 import menuserch from '../components/new/menuSerch'
 
-import vie_one from '@/components/module/vie_one'
-import vie_Home from '@/components/module/Home'
-import vie_About from '@/components/module/About'
-import TranSition from '@/components/module/TranSition'
-import CssDiv from '@/components/module/CssDiv'
+import vie_one from '@/components/Van/vie_one'
+import Echartshree from '@/components/Echarts/Echartshree'
+import vie_About from '@/components/Css/About'
+import CssTranSition from '@/components/Css/CssTranSition'
+import CssDiv from '@/components/Css/CssDiv'
 
 
 Vue.use(VueRouter)
@@ -18,7 +18,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/vie_About'//重定向
+    redirect: '/com/menuserch'//重定向
   },
   {
     path: '/',
@@ -33,9 +33,9 @@ const routes = [
       name: 'vie_About',
       component: vie_About
     }, {
-      path: '/vie_Home',
-      name: 'vie_Home',
-      component: vie_Home
+      path: '/Echartshree',
+      name: 'Echartshree',
+      component: Echartshree
     }, {
       path: '/CssDiv',
       name: 'CssDiv',
@@ -49,9 +49,9 @@ const routes = [
       name: 'menuserch',
       component: menuserch
     }, {
-      path: '/com/TranSition',
-      name: 'TranSition',
-      component: TranSition
+      path: '/CssTranSition',
+      name: 'CssTranSition',
+      component: CssTranSition
     }, {
       path: '/first/leftInput',
       name: 'leftInput',

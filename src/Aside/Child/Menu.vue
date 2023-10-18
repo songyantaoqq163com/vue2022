@@ -32,48 +32,25 @@ export default {
   data() {
     return {
       activeIndex11: '2',
-      menu_data: [
-        {
-          index: '1',
-          name: '组件',
-          // route:'/#1',
-          children: [{
-            index: '1-1',
-            name: 'van组件',
-            // route:'/#11',
-            children: [{
-              index: '1-2',
-              name: 'van用法1',
-              route: 'vie_one'
-            }]
-          }, {
-            index: '1-11',
-            name: 'echarts三维',
-            route: '/vie_Home',
-          }, {
-            index: '1-111',
-            name: 'cancat画布',
-            route: '/vie_About',
-          }, {
-            index: '2',
-            name: 'css功能',
-            children: [{
-              index: '2-1',
-              name: '旋转1',
-              route: '/com/TranSition'
-            }, {
-              index: '2-2',
-              name: '浮动布局',
-              route: '/CssDiv'
-            }]
-          }]
-        }, {
+      menu_data: [ {
           index: '2',
           name: '新世界',
           route: '/com/menuserch'
+        },{
+          index: '1',
+          name: 'VAN',
+          children: [{
+            index: '1-1',
+            name: 'van用法1',
+            route: '/vie_one'
+          }, {
+            index: '1-2',
+            name: 'cancat画布',
+            route: '/vie_About',
+          }]
         }, {
           index: '3',
-          name: '菜单查询',
+          name: 'Element',
           children: [{
             index: '3-1',
             name: '查询表格',
@@ -82,6 +59,26 @@ export default {
             index: '3-2',
             name: '解析表格',
             route: '/first/leftInput'
+          }]
+        },{
+          index:'4',
+          name:'Echarts',
+          children:[{
+            index:'4-1',
+            name:'echarts三维',
+            route:'/Echartshree'
+          }]
+        },{
+          index:'5',
+          name:'Css',
+          children:[{
+            index:'5-1',
+            name:'浮动布局',
+            route:'/CssDiv'
+          },{
+            index:'5-2',
+            name:'旋转',
+            route:'/CssTranSition'
           }]
         }
       ]
