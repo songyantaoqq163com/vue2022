@@ -12,6 +12,7 @@ import vie_About from '@/components/Css/About'
 import CssTranSition from '@/components/Css/CssTranSition'
 import CssDiv from '@/components/Css/CssDiv'
 import jsDrag from '@/components/JsFunction/jsDrag'
+import jsvudiovisual from '@/components/JsFunction/jsvudiovisual'
 
 
 Vue.use(VueRouter)
@@ -61,6 +62,11 @@ const routes = [
       path:'/js/jsDrag',
       name:'jsDrag',
       component:jsDrag
+    },{
+      path:'/js/jsvudiovisual',
+      name:'jsvudiovisual',
+      component:jsvudiovisual,
+      meta: {title: 'vudioisual'}
     }]
   },
 

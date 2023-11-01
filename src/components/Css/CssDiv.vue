@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flexenter">
         <div class="borderred disblock">
             <span>scss方法变色文字</span>
         </div>
@@ -10,7 +10,11 @@
             <div>4</div>
             <div>5</div>
         </div>
-        
+        <div>
+            <div class="box"></div>
+            <div class="box show360"></div>
+        </div>
+
     </div>
 </template>
 <script>
@@ -62,12 +66,57 @@ export default {
     clear: both;
 }
 
-.borderred{
-    span{
-        border:1px solid lawngreen;
-        &:hover{
+.borderred {
+    span {
+        border: 1px solid lawngreen;
+
+        &:hover {
             color: red;
-        }    
+        }
+    }
+}
+
+.box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px red($color: #000000);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+// 图标1
+.box:after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 8px;
+    background: hwb(303 33% 11%);
+    z-index: 1;
+}
+
+// 图标2
+.box.show360::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 20px;
+    height: 150%;
+    background: #00ff00;
+    box-shadow: 0 0 50px #00ff00; //盒子内背景
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 </style>

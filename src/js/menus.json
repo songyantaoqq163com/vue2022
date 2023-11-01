@@ -72,6 +72,10 @@
                     "index": "6-1",
                     "name": "拖拽功能",
                     "route": "/js/jsDrag"
+                },{
+                    "index":"6-2",
+                    "name":"audio播放",
+                    "route":"/js/jsvudiovisual"
                 }
             ]
         }
