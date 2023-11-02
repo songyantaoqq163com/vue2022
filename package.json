@@ -13,6 +13,7 @@
     "element-ui": "^2.15.1",
     "file-saver": "^2.0.5",
     "less-loader": "^4.0.6",
+    "mitt": "^3.0.1",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0",
     "sortable.js": "^0.3.0",
