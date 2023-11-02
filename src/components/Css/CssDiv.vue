@@ -11,8 +11,10 @@
             <div>5</div>
         </div>
         <div>
-            <div class="box"></div>
-            <div class="box show360"></div>
+            <div class="box"><span>图1</span></div>
+            <div class="box show360"><span>图2</span></div>
+            <div class="box2"><span>图3</span></div>
+        
         </div>
 
     </div>
@@ -30,11 +32,6 @@ export default {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    ;
-    /* display: grid;
-    grid-gap: 10px;
-    grid-auto-rows: minmax(120px, auto);
-    grid-auto-flow: dense; */
 }
 
 .divnums div {
@@ -85,8 +82,12 @@ export default {
     display: flex;
     overflow: hidden;
     justify-content: center;
+    align-items: center;
+    z-index:100
 }
-
+.box span{
+    z-index: 1000;
+}
 // 图标1
 .box:after {
     content: '';
@@ -96,7 +97,6 @@ export default {
     background: hwb(303 33% 11%);
     z-index: 1;
 }
-
 // 图标2
 .box.show360::before {
     content: '';
@@ -109,7 +109,41 @@ export default {
     box-shadow: 0 0 50px #00ff00; //盒子内背景
     animation: animate 2s linear infinite;
 }
-
+// 图标3hover3
+.box2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px red($color: #000000);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index:100
+}
+.box2:after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 8px;
+    background: hwb(303 33% 11%);
+    z-index: 1;
+}
+.box2 span{
+    z-index: 1000;
+}
+.box2:hover::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 20px;
+    height: 150%;
+    background: #00ff00;
+    box-shadow: 0 0 50px #00ff00; //盒子内背景
+    animation: animate 2s linear infinite;
+}
 @keyframes animate {
     0% {
         transform: rotate(0deg);
