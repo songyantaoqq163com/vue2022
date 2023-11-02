@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../Aside/Home'
-import Homepage from '../menulist/HelloWorld'
-import leftInput from '../menulist/leftInput'
+import Homepage from '../element/HelloWorld'
+import leftInput from '../element/leftInput'
+import firstswitch from '../element/switch.vue'
 
 import menuserch from '../components/new/menuSerch'
 
 import vie_one from '@/components/Van/vie_one'
 import Echartshree from '@/components/Echarts/Echartshree'
-import vie_About from '@/components/Css/About'
+
 import CssTranSition from '@/components/Css/CssTranSition'
 import CssDiv from '@/components/Css/CssDiv'
+import Csscarousel from '@/components/Css/Csscarousel'
+
+import vie_About from '@/components/JsFunction/About'
 import jsDrag from '@/components/JsFunction/jsDrag'
 import jsvudiovisual from '@/components/JsFunction/jsvudiovisual'
 
@@ -30,6 +34,10 @@ const routes = [
       path: '/first/Homepage',
       name: 'Homepage',
       component: Homepage
+    },{
+      path:'/first/switch',
+      name:'firstswitch',
+      component:firstswitch
     }, {
       path: '/vie_About',
       name: 'vie_About',
@@ -43,6 +51,14 @@ const routes = [
       name: 'CssDiv',
       component: CssDiv
     }, {
+      path: '/CssTranSition',
+      name: 'CssTranSition',
+      component: CssTranSition
+    }, {
+      path:'/Csscarousel',
+      name:'Csscarousel',
+      component:Csscarousel
+    },{
       path: '/vie_one',
       name: 'vie_one',
       component: vie_one
@@ -50,10 +66,6 @@ const routes = [
       path: '/com/menuserch',
       name: 'menuserch',
       component: menuserch
-    }, {
-      path: '/CssTranSition',
-      name: 'CssTranSition',
-      component: CssTranSition
     }, {
       path: '/first/leftInput',
       name: 'leftInput',

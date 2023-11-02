@@ -30,6 +30,7 @@ Vue.use(ElementUI)
 Vue.use(Vant)
 Vue.component('saveAs',saveAs)
 
+
 new Vue({
   router,
   store,

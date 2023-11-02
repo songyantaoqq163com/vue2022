@@ -1,14 +1,11 @@
 <template>
   <div class="AMChild">
-   <div class="AM-center">
     <router-view></router-view>
-   </div>
-   
   </div>
 </template>
 <script>
 import conmheader from "@/js/conmheader";
-
+import bus from '../../js/bus'
 export default {
   name: "asideChild",
   components: {
@@ -67,6 +64,16 @@ export default {
   },
   mounted() {
     console.log("mounted优先级低");
+    bus.$on('deom', (data) => {
+      let a = document.getElementsByClassName('AMChild')
+      if (data == false) {
+        a[0].style.backgroundColor = '#000'
+        a[0].style.color = '#fff'
+      } else {
+        a[0].style.backgroundColor = '#fff'
+        a[0].style.color = '#000'
+      }
+    })
   },
   watch: {
     fullHeight(val) {
@@ -74,7 +81,7 @@ export default {
         this.fullHeight = val;
         this.timer = true;
         let that = this;
-        setTimeout(function() {
+        setTimeout(function () {
           that.timer = false;
         }, 400);
       }
@@ -85,13 +92,11 @@ export default {
 
 <style>
 .AMChild {
-  background: #e9eef3;
-}
-.AM-center{
   margin: 20px;
   height: calc(100vh - 160px);
   border-radius: 10px;
   box-shadow: 0px 5px 10px 5px #888888;
   overflow: auto;
+  background: #e9eef3;
 }
 </style>

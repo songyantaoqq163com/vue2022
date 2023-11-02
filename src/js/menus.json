@@ -13,11 +13,6 @@
                     "index": "1-1",
                     "name": "van用法1",
                     "route": "/vie_one"
-                },
-                {
-                    "index": "1-2",
-                    "name": "cancat画布",
-                    "route": "/vie_About"
                 }
             ]
         },
@@ -34,6 +29,10 @@
                     "index": "3-2",
                     "name": "解析表格",
                     "route": "/first/leftInput"
+                },{
+                    "index":"3-3",
+                    "name":"switch开关",
+                    "route":"/first/switch"
                 }
             ]
         },
@@ -61,6 +60,10 @@
                     "index": "5-2",
                     "name": "旋转",
                     "route": "/CssTranSition"
+                },{
+                    "index":"5-3",
+                    "name":"css轮播",
+                    "route":"/Csscarousel"
                 }
             ]
         },
@@ -76,6 +79,10 @@
                     "index":"6-2",
                     "name":"audio播放",
                     "route":"/js/jsvudiovisual"
+                },{
+                    "index": "6-3",
+                    "name": "cancat画布",
+                    "route": "/vie_About"
                 }
             ]
         }
