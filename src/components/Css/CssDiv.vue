@@ -1,5 +1,5 @@
 <template>
-    <div class="flexenter">
+    <div class=''>
         <div class="borderred disblock">
             <span>scss方法变色文字</span>
         </div>
@@ -14,8 +14,21 @@
             <div class="box"><span>图1</span></div>
             <div class="box show360"><span>图2</span></div>
             <div class="box2"><span>图3</span></div>
-        
         </div>
+      <div class="borderred flexbetween" style="height: 300px">
+        <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+          <span>上左1</span>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+          <span>上左2</span>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+          <span>上左3</span>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+          <span>上左4</span>
+        </el-tooltip>
+      </div>
 
     </div>
 </template>

@@ -2,3 +2,7 @@
     display:flex;
     justify-content: space-around;
 }
+.flexbetween{
+    display:flex;
+    justify-content: space-between;
+}
