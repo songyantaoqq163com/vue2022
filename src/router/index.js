@@ -13,7 +13,8 @@ import Echartshree from '@/components/Echarts/Echartshree'
 import CssTranSition from '@/components/Css/CssTranSition'
 import CssDiv from '@/components/Css/CssDiv'
 import Csscarousel from '@/components/Css/Csscarousel'
-
+// import CssSvg from '@/components/Css/CssSvg'
+// component: () => import('@/components/Css/CssSvg.vue'),
 import vie_About from '@/components/JsFunction/About'
 import jsDrag from '@/components/JsFunction/jsDrag'
 import jsvudiovisual from '@/components/JsFunction/jsvudiovisual'
@@ -47,6 +48,10 @@ const routes = [
       name: 'Echartshree',
       component: Echartshree
     }, {
+      path:'/CssSvg',
+      name:'CssSvg',
+      component: () => import('@/components/Css/CssSvg.vue')
+    },{
       path: '/CssDiv',
       name: 'CssDiv',
       component: CssDiv

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-工艺</title>
+    <g id="icon-工艺" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-3" transform="translate(2.500000, 2.000000)">
+            <path d="M13.5022602,3.15826685 L17.5,5.4202754 L17.5,10.5735055 M13.4563694,16.7613997 L9.5,19 L5.483436,16.7273403 M1.5,10.7101992 L1.5,5.4202754 L5.624552,3.08651372" id="形状" stroke="#242424" stroke-linecap="round"></path>
+            <circle id="椭圆形备份-9" stroke="#2979FF" cx="9.5" cy="2.5" r="2"></circle>
+            <circle id="椭圆形备份-10" stroke="#2979FF" cx="2.5" cy="14.5" r="2"></circle>
+            <circle id="椭圆形备份-11" stroke="#2979FF" cx="16.5" cy="14.5" r="2"></circle>
+        </g>
+    </g>
+</svg>

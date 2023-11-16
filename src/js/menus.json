@@ -64,6 +64,10 @@
                     "index":"5-3",
                     "name":"css轮播",
                     "route":"/Csscarousel"
+                },{
+                    "index":"5-4",
+                    "name":"css-Svg",
+                    "route":"/CssSvg"
                 }
             ]
         },

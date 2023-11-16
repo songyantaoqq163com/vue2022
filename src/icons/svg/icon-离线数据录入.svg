@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-离线数据录入</title>
+    <g id="icon-离线数据录入" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-2" transform="translate(4.000000, 1.706817)">
+            <path d="M16,7.02262017 L16,17.3487381 C16,17.8703404 15.5522847,18.2931826 15,18.2931826 L1,18.2931826 C0.44771525,18.2931826 0,17.8703404 0,17.3487381 L0,2.23762701 C0,1.71602475 0.44771525,1.29318257 1,1.29318257 L10.6029385,1.29318257" id="路径" stroke="#242424" stroke-linecap="round"></path>
+            <rect id="矩形" stroke="#2979FF" x="3.5" y="11.7931826" width="5" height="1" rx="0.5"></rect>
+            <rect id="矩形备份" stroke="#2979FF" x="3.5" y="15.7931826" width="3" height="1" rx="0.5"></rect>
+            <path d="M13.4258579,0.609745102 L14.3556221,1.38473415 L14.4998733,7.79318257 L12.5,7.79318257 L12.5,1.68810853 L13.4258579,0.609745102 Z" id="矩形" stroke="#242424" transform="translate(13.500000, 4.056469) rotate(-135.000000) translate(-13.500000, -4.056469) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,5 @@
 <template>
-    <div class=''>
+    <div class='flexbetween'>
         <div class="borderred disblock">
             <span>scss方法变色文字</span>
         </div>
@@ -15,7 +15,7 @@
             <div class="box show360"><span>图2</span></div>
             <div class="box2"><span>图3</span></div>
         </div>
-      <div class="borderred flexbetween" style="height: 300px">
+      <div class="borderred flexbetween" style=" width:200px;height: 300px">
         <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
           <span>上左1</span>
         </el-tooltip>

@@ -6,7 +6,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
 // import CanvasVideo from 'vue-canvasvideo'
-// import 'vue-canvasvideo/dist/vue-canvasvideo'
+import '../src/icons'
 
 import Vant from 'vant'
 import 'vant/lib/index.css'
@@ -23,13 +23,18 @@ import './views/indexCss.css'
 import  *  as echarts from 'echarts'
 import "echarts-gl"; //echarts 3D插件
 import {saveAs} from 'file-saver'//下载txt文件
+// import SvgIcon from '@/SvgIcon'
+
 Vue.prototype.$echarts = echarts;
 // Vue.use(CanvasVideo)
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(Vant)
 Vue.component('saveAs',saveAs)
-
+// Vue.component('svg-icon',SvgIcon)
+// const req=require.context('./svg',false,/\.svg$/)
+// const requireAll = requireContext => requireContext.keys().map(requireContext)
+// requireAll(req)
 
 new Vue({
   router,

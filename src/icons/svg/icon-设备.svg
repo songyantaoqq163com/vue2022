@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-设备</title>
+    <g id="icon-设备" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(3.000000, 4.000000)">
+            <rect id="矩形" stroke="#242424" x="0.5" y="0.5" width="17" height="15" rx="1"></rect>
+            <rect id="矩形" stroke="#242424" x="0.5" y="5.5" width="17" height="1" rx="0.5"></rect>
+            <rect id="矩形备份" stroke="#242424" x="0.5" y="10.5" width="17" height="1" rx="0.5"></rect>
+            <rect id="矩形" stroke="#2979FF" x="2.5" y="3" width="1" height="1" rx="0.5"></rect>
+            <rect id="矩形备份-2" stroke="#2979FF" x="2.5" y="8" width="1" height="1" rx="0.5"></rect>
+            <rect id="矩形备份-3" stroke="#2979FF" x="2.5" y="13" width="1" height="1" rx="0.5"></rect>
+        </g>
+    </g>
+</svg>
